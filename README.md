@@ -5,6 +5,9 @@ This repo contains both source code and an .exe file compiled through PyInstalle
 
 # Example:
 
+![image](https://github.com/LostPersona/vk-list-saver/assets/37241729/a1f41c6e-8a72-44aa-9eb5-c95067f7ef81)
+
+
 * Provided URL:
 
 **vk.com/artdamin**
