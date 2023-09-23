@@ -5,6 +5,11 @@ import re
 import os
 import pyperclip
 
+# All the imported modules can be installed through "pip install <name>"
+
+
+# This function creates a config file and adds two lines saying that placeholder needs to be
+# replaced with actual user access token.
 def create_config_file():
     with open('config.txt', 'w') as config_file:
         config_file.write("# Подставьте вместо 'вставьте_токен' свой токен пользователя.\n")
@@ -25,6 +30,7 @@ else:
     create_config_file()
     access_token = 'вставьте_токен'
 
+# Check for the placeholder instead of actual user access token.
 if 'вставьте_токен' in access_token:
     messagebox.showinfo("Токен", "Замените 'вставьте_токен' на свой токен в 'config.txt'\nи перезапустите программу.")
 def get_user_info(custom_link):
@@ -47,6 +53,7 @@ def get_user_info(custom_link):
 
     return None
 
+# This functions pares the link and saves it into list.txt.
 def parse_and_save_to_list(custom_link, user_info):
     if user_info:
         user_id = user_info['id']
@@ -61,7 +68,7 @@ def parse_and_save_to_list(custom_link, user_info):
 
 def paste_from_clipboard():
     clipboard_text = pyperclip.paste()
-    entry.delete(0, tk.END)  # Clear the existing text
+    entry.delete(0, tk.END)
     entry.insert(0, clipboard_text)
 
 def retrieve_info():
@@ -87,7 +94,7 @@ app.grid_columnconfigure(1, weight=1)
 
 label = tk.Label(app, text="Введите ссылку или её часть:\n(Например: vk.com/artdamin)")
 label.grid(row=0, column=0, columnspan=2, sticky="ew")
-label.grid_rowconfigure(0, weight=1)  # Make the label resizable
+label.grid_rowconfigure(0, weight=1) 
 
 entry = tk.Entry(app)
 entry.grid(row=1, column=0, columnspan=2, sticky="ew")
