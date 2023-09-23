@@ -2,6 +2,7 @@
 
 This project aims to implement a simple Python-based tool to save provided VK (Russian soical network) user URLs into the text file.
 This repo contains both source code and an .exe file compiled through PyInstaller in the Releases tab.
+The GUI was created with Tkinter and uses Russian language.
 
 # Example:
 
